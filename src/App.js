@@ -52,10 +52,23 @@ function App() {
       // 4.땅볼(
         // 	러너=0?(아웃++)
         // 	러너=1(병살)?(아웃+2,러너--)
-        // 	러너=2(3병)?(아웃+3,러너-2)
+        // 	러너=2(병살)?(아웃+2,러너--)
         // 	러너=3(홈 투구)?(아웃++)
         // )
-      
+      if (runn==0||runn==3) {
+        let ou=outs+1
+        setOuts(ou)
+      }
+      if (runn==1) {
+        let ou=outs+2
+        setOuts(ou)
+        setRunn(0)
+      }
+      if (runn==2) {
+        let ou=outs+2
+        setOuts(ou)
+        setRunn(1)
+      }
     }
   }
   const nono=()=>{}
