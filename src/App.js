@@ -8,6 +8,7 @@ function App() {
   const[mymy,setMymy]=useState(0)
   const[juck,setJuck]=useState(0)
   const[runn,setRunn]=useState(0)
+  const[outs,setOuts]=useState(0)
   const wing=()=>{
     let rdnb=Math.floor(Math.random()*7)
     $('.comp').fadeIn(0).delay(3000).fadeOut(0)
@@ -47,6 +48,7 @@ function App() {
           <div className='pan1'></div>
           <div className='pan2'></div>
           <div className='pan3'></div>
+          <span className='oo'>{outs} out</span>
         </div>
         <img src='https://media.istockphoto.com/id/165960042/vector/baseball-stadium.jpg?s=612x612&w=0&k=20&c=kbbIVGYSxrY15WEvbR-zqcGR2-vPI_qdkTo0U4Dh27Q=' className='back'></img>
         <div className='txt1' onClick={wing}>SWING</div>
