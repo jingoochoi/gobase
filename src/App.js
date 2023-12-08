@@ -107,6 +107,10 @@ function App() {
     $('.pan2').css({backgroundColor:'yellow'})
     $('.pan3').css({backgroundColor:'yellow'})
   }
+  if (outs>2) {
+    let enem=juck+Math.floor(Math.random()*2)
+    setJuck(enem)
+  }
   return (
     <>
       <div className='jong'><div className='gtxt'></div></div>
