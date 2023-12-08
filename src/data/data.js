@@ -5,9 +5,9 @@ export const stat=[
     // 1.페어(러너++,러너=4?(점수++,러너=3))
     {text:'FAIR HIT!',mage:'https://media.istockphoto.com/id/1491149845/vector/baseball-batter-player-running-to-base-after-hitting-ball-flat-vector-isolated.jpg?s=612x612&w=0&k=20&c=cA9s8yH41FRQcgo37DvWxju7PLyM5GPw7hQXn7oxVXo='},
     // 2.외뜬(아웃++,러너=3?(점수++,러너--))
-    {text:'OUTFIELD FLYOUT!',mage:'https://www.clker.com/cliparts/1/3/c/a/1197085816177213681johnny_automatic_making_the_catch.svg.hi.png'},
+    {text:'OUTFIELD FLYOUT!',mage:'https://www.rookieroad.com/img/baseball/baseball-center-fielder-history.png'},
     // 3.내뜬(아웃++)
-    {text:'INFIELD FLYOUT!',mage:'https://www.clker.com/cliparts/1/3/c/a/1197085816177213681johnny_automatic_making_the_catch.svg.hi.png'},
+    {text:'INFIELD FLYOUT!',mage:'https://www.rookieroad.com/img/baseball/baseball-center-fielder-history.png'},
     // 4.땅볼(
         // 	러너=0?(아웃++)
         // 	러너=1(병살)?(아웃+2,러너--)
