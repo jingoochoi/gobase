@@ -19,7 +19,7 @@ function App() {
           <div className='pan2'></div>
           <div className='pan3'></div>
         </div>
-        <img src='' className='back'></img>
+        <img src='https://media.istockphoto.com/id/165960042/vector/baseball-stadium.jpg?s=612x612&w=0&k=20&c=kbbIVGYSxrY15WEvbR-zqcGR2-vPI_qdkTo0U4Dh27Q=' className='back'></img>
         <div className='txt1' onClick={wing}>SWING</div>
         <div className='txt2' onClick={nono}>NO SWING</div>
       </div>
