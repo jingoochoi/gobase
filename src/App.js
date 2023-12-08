@@ -2,11 +2,40 @@ import logo from './logo.svg';
 import './css/main.css';
 import { useState } from 'react';
 import $ from 'jquery'
+import { stat } from './data/data';
 function App() {
   const[inin,setInin]=useState(1)
   const[mymy,setMymy]=useState(0)
   const[juck,setJuck]=useState(0)
-  const wing=()=>{}
+  const[runn,setRunn]=useState(0)
+  const wing=()=>{
+    let rdnb=Math.floor(Math.random()*7)
+    $('.comp').fadeIn(0).delay(3000).fadeOut(0)
+    $('.ttxt').html(`
+        ${stat[rdnb].text}
+        <br>
+        <img src=${stat[rdnb].mage}>
+    `)
+    if (rdnb==0) {
+      // 0.홈런(점수=러너+1,러너=0)
+      let pt=runn+1
+      setMymy(pt)
+      setRunn(0)
+    }
+    if (rdnb==1) {
+      // 1.페어(러너++,러너=4?(점수++,러너=3))
+      let rn=runn+1
+      setRunn(rn)
+      if (runn==4) {
+        let pt=mymy+1
+        setMymy(pt)
+        setRunn(3)
+      }
+    }
+    if (rdnb==2) {
+      // 2.외뜬(아웃++,러너=3?(점수++,러너--))
+    }
+  }
   const nono=()=>{}
   return (
     <>
