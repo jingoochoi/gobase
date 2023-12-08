@@ -20,7 +20,7 @@ function App() {
     `)
     if (rdnb==0) {
       // 0.홈런(점수=러너+1,러너=0)
-      let pt=runn+1
+      let pt=mymy+runn+1
       setMymy(pt)
       setRunn(0)
     }
