@@ -13,8 +13,12 @@ function App() {
       <div className='jong'><div className='gtxt'></div></div>
       <div className='comp'><div className='ttxt'></div></div>
       <div className='stdu'>
-        <p className='time'><span className='boon'>{inin}</span>inning</p>
-        <b className='mtch'>MYTEAM({mymy})<br/>VS<br/>ENEMY({juck})</b>
+        <b className='mtch'>MYTEAM({mymy})<br/>▲{inin}<br/>ENEMY({juck})</b>
+        <div className='base'>
+          <div className='pan1'></div>
+          <div className='pan2'></div>
+          <div className='pan3'></div>
+        </div>
         <img src='' className='back'></img>
         <div className='txt1' onClick={wing}>SWING</div>
         <div className='txt2' onClick={nono}>NO SWING</div>
