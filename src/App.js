@@ -110,6 +110,31 @@ function App() {
   if (outs>2) {
     let enem=juck+Math.floor(Math.random()*2)
     setJuck(enem)
+    let ii=inin+1
+    setInin(ii)
+    setRunn(0)
+    setOuts(0)
+  }
+  if (inin>9) {
+    if (juck>mymy) {
+      setTimeout(() => {
+        $('.stdu').html(`
+            <p>GAME SET.<br>MY TEAM ${mymy} : ${juck} ENEMY.</p>
+            <br><br>
+            <div style="outline: 1px solid black;width: 80%;height: 10vh;display: flex;justify-content: center;align-items: center;transform: translateX(12%);bottom: 20vh;position: absolute;" onclick="location.reload()">RESET</div>
+        `).css({textAlign:'center'}).find('p').css({position:'absolute',top:'50%',left:'50%',transform:'translate(-50%,-50%)'})
+      }, 2000);
+    }else{
+      let en=juck+Math.floor(Math.random()*2)
+      setJuck(en)
+      setTimeout(() => {
+        $('.stdu').html(`
+            <p>GAME SET.<br>MY TEAM ${mymy} : ${juck} ENEMY.</p>
+            <br><br>
+            <div style="outline: 1px solid black;width: 80%;height: 10vh;display: flex;justify-content: center;align-items: center;transform: translateX(12%);bottom: 20vh;position: absolute;" onclick="location.reload()">RESET</div>
+        `).css({textAlign:'center'}).find('p').css({position:'absolute',top:'50%',left:'50%',transform:'translate(-50%,-50%)'})
+      }, 2000);
+    }
   }
   return (
     <>
