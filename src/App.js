@@ -11,7 +11,7 @@ function App() {
   const[outs,setOuts]=useState(0)
   const wing=()=>{
     let rdnb=Math.floor(Math.random()*7)
-    $('.comp').fadeIn(0).delay(3000).fadeOut(0)
+    $('.comp').fadeIn(0).delay(2000).fadeOut(0)
     $('.ttxt').html(`
         ${stat[rdnb].text}
         <br>
@@ -35,6 +35,18 @@ function App() {
     }
     if (rdnb==2) {
       // 2.외뜬(아웃++,러너=3?(점수++,러너--))
+      let ou=outs+1
+      setOuts(ou)
+      if (runn==3) {
+        let pt=mymy+1
+        setMymy(pt)
+        setRunn(2)
+      }
+    }
+    if (rdnb==3) {
+      // 3.내뜬(아웃++)
+      let ou=outs+1
+      setOuts(ou)
     }
   }
   const nono=()=>{}
