@@ -3,6 +3,7 @@ import './css/main.css';
 import { useState } from 'react';
 import $ from 'jquery'
 import { stat } from './data/data';
+import { swingx } from './data/x';
 function App() {
   const[inin,setInin]=useState(1)
   const[mymy,setMymy]=useState(0)
@@ -77,7 +78,15 @@ function App() {
     }
     // 6.파울(유지)-no need coding
   }
-  const nono=()=>{}
+  const nono=()=>{
+    let rdnb=Math.floor(Math.random()*3)
+    $('.comp').fadeIn(0).delay(2000).fadeOut(0)
+    $('.ttxt').html(`
+        ${swingx[rdnb].text}
+        <br>
+        <img src=${swingx[rdnb].mage}>
+    `)
+  }
   if (runn==0) {
     $('.pan1').css({backgroundColor:'white'})
     $('.pan2').css({backgroundColor:'white'})
