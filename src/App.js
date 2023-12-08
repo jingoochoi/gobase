@@ -70,8 +70,34 @@ function App() {
         setRunn(1)
       }
     }
+    if (rdnb==5) {
+      // 5.삼진(아웃++)
+      let ou=outs+1
+        setOuts(ou)
+    }
+    // 6.파울(유지)-no need coding
   }
   const nono=()=>{}
+  if (runn==0) {
+    $('.pan1').css({backgroundColor:'white'})
+    $('.pan2').css({backgroundColor:'white'})
+    $('.pan3').css({backgroundColor:'white'})
+  }
+  if (runn==1) {
+    $('.pan1').css({backgroundColor:'yellow'})
+    $('.pan2').css({backgroundColor:'white'})
+    $('.pan3').css({backgroundColor:'white'})
+  }
+  if (runn==2) {
+    $('.pan1').css({backgroundColor:'yellow'})
+    $('.pan2').css({backgroundColor:'yellow'})
+    $('.pan3').css({backgroundColor:'white'})
+  }
+  if (runn==3) {
+    $('.pan1').css({backgroundColor:'yellow'})
+    $('.pan2').css({backgroundColor:'yellow'})
+    $('.pan3').css({backgroundColor:'yellow'})
+  }
   return (
     <>
       <div className='jong'><div className='gtxt'></div></div>
