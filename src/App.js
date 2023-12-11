@@ -28,7 +28,7 @@ function App() {
       // 1.페어(러너++,러너=4?(점수++,러너=3))
       let rn=runn+1
       setRunn(rn)
-      if (runn==4) {
+      if (runn==3) {
         let pt=mymy+1
         setMymy(pt)
         setRunn(3)
@@ -86,7 +86,33 @@ function App() {
         <br>
         <img src=${swingx[rdnb].mage}>
     `)
+    if (rdnb==0) {
+      // 0.삼진(아웃++)
+      let ou=outs+1
+        setOuts(ou)
+    }
+    if (rdnb==1) {
+      // 1.死球(러너++)
+      let rb=runn+1
+      setRunn(rb)
+      if (runn==3) {
+        let pt=mymy+1
+        setMymy(pt)
+        setRunn(3)
+      }
+    }
+    if (rdnb==2) {
+      // 2.볼넷(러너++)
+      let rs=runn+1
+      setRunn(rs)
+      if (runn==3) {
+        let pt=mymy+1
+        setMymy(pt)
+        setRunn(3)
+      }
+    }
   }
+  // console.log(runn)
   if (runn==0) {
     $('.pan1').css({backgroundColor:'white'})
     $('.pan2').css({backgroundColor:'white'})
@@ -124,7 +150,8 @@ function App() {
             <div style="outline: 1px solid black;width: 80%;height: 10vh;display: flex;justify-content: center;align-items: center;transform: translateX(12%);bottom: 20vh;position: absolute;" onclick="location.reload()">RESET</div>
         `).css({textAlign:'center'}).find('p').css({position:'absolute',top:'50%',left:'50%',transform:'translate(-50%,-50%)'})
       }, 2000);
-    }else{
+    }
+    if(juck==mymy||mymy>juck){
       let en=juck+Math.floor(Math.random()*2)
       setJuck(en)
       setTimeout(() => {
