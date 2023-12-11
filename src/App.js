@@ -152,8 +152,9 @@ function App() {
       }, 2000);
     }
     if(juck==mymy||mymy>juck){
-      let en=juck+Math.floor(Math.random()*2)
-      setJuck(en)
+      let crcr=Math.floor(Math.random()*2)
+      let en=juck+crcr
+      setJuck(en)//갑자기 적 점수가 많이 늘어남.
       setTimeout(() => {
         $('.stdu').html(`
             <p>GAME SET.<br>MY TEAM ${mymy} : ${juck} ENEMY.</p>
