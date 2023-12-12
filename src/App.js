@@ -134,14 +134,17 @@ function App() {
     $('.pan3').css({backgroundColor:'yellow'})
   }
   if (outs>2) {
-    let enem=juck+Math.floor(Math.random()*2)
-    setJuck(enem)
+    if (inin<9) {
+      let enem=juck+Math.floor(Math.random()*2)
+      setJuck(enem)
+    }
     let ii=inin+1
     setInin(ii)
     setRunn(0)
     setOuts(0)
+    // console.log(juck)
   }
-  if (inin>9) {
+  if (inin==10) {
     if (juck>mymy) {
       setTimeout(() => {
         $('.stdu').html(`
@@ -151,17 +154,20 @@ function App() {
         `).css({textAlign:'center'}).find('p').css({position:'absolute',top:'50%',left:'50%',transform:'translate(-50%,-50%)'})
       }, 2000);
     }
-    if(juck==mymy||mymy>juck){
-      let crcr=Math.floor(Math.random()*2)
-      let en=juck+crcr
-      setJuck(en)//갑자기 적 점수가 많이 늘어남.
+    // console.log(juck)
+    else if(juck==mymy||mymy>juck){
+      // console.log(juck)
+      // let en=juck+Math.floor(Math.random()*2)
+      // setJuck(en)//갑자기 적 점수가 많이 늘어남.
+      // console.log(juck)
       setTimeout(() => {
         $('.stdu').html(`
-            <p>GAME SET.<br>MY TEAM ${mymy} : ${juck} ENEMY.</p>
-            <br><br>
-            <div style="outline: 1px solid black;width: 80%;height: 10vh;display: flex;justify-content: center;align-items: center;transform: translateX(12%);bottom: 20vh;position: absolute;" onclick="location.reload()">RESET</div>
+        <p>GAME SET.<br>MY TEAM ${mymy} : ${juck} ENEMY.</p>
+        <br><br>
+        <div style="outline: 1px solid black;width: 80%;height: 10vh;display: flex;justify-content: center;align-items: center;transform: translateX(12%);bottom: 20vh;position: absolute;" onclick="location.reload()">RESET</div>
         `).css({textAlign:'center'}).find('p').css({position:'absolute',top:'50%',left:'50%',transform:'translate(-50%,-50%)'})
       }, 2000);
+      console.log(juck)
     }
   }
   return (
@@ -177,8 +183,8 @@ function App() {
           <span className='oo'>{outs} out</span>
         </div>
         <img src='https://media.istockphoto.com/id/165960042/vector/baseball-stadium.jpg?s=612x612&w=0&k=20&c=kbbIVGYSxrY15WEvbR-zqcGR2-vPI_qdkTo0U4Dh27Q=' className='back'></img>
-        <div className='txt1' onClick={wing}>SWING</div>
-        <div className='txt2' onClick={nono}>NO SWING</div>
+        <div className='txt1' onClick={()=>wing()}>SWING</div>
+        <div className='txt2' onClick={()=>nono()}>NO SWING</div>
       </div>
     </>
   );
