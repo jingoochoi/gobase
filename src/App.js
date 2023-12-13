@@ -135,7 +135,11 @@ function App() {
   }
   if (outs>2) {
     if (inin<9) {
-      let enem=juck+Math.floor(Math.random()*2)
+      let enem=juck+Math.floor(Math.random()*3)
+      setJuck(enem)
+    }
+    if (inin==9&&mymy>juck) {
+      let enem=juck+Math.floor(Math.random()*6)
       setJuck(enem)
     }
     let ii=inin+1
