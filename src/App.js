@@ -145,7 +145,7 @@ function App() {
     // console.log(juck)
   }
   if (inin==10) {
-    if (juck>mymy) {
+    // if (juck>mymy) {
       setTimeout(() => {
         $('.stdu').html(`
             <p>GAME SET.<br>MY TEAM ${mymy} : ${juck} ENEMY.</p>
@@ -153,22 +153,8 @@ function App() {
             <div style="outline: 1px solid black;width: 80%;height: 10vh;display: flex;justify-content: center;align-items: center;transform: translateX(12%);bottom: 20vh;position: absolute;" onclick="location.reload()">RESET</div>
         `).css({textAlign:'center'}).find('p').css({position:'absolute',top:'50%',left:'50%',transform:'translate(-50%,-50%)'})
       }, 2000);
-    }
+    // }
     // console.log(juck)
-    else if(juck==mymy||mymy>juck){
-      // console.log(juck)
-      // let en=juck+Math.floor(Math.random()*2)
-      // setJuck(en)//갑자기 적 점수가 많이 늘어남.
-      // console.log(juck)
-      setTimeout(() => {
-        $('.stdu').html(`
-        <p>GAME SET.<br>MY TEAM ${mymy} : ${juck} ENEMY.</p>
-        <br><br>
-        <div style="outline: 1px solid black;width: 80%;height: 10vh;display: flex;justify-content: center;align-items: center;transform: translateX(12%);bottom: 20vh;position: absolute;" onclick="location.reload()">RESET</div>
-        `).css({textAlign:'center'}).find('p').css({position:'absolute',top:'50%',left:'50%',transform:'translate(-50%,-50%)'})
-      }, 2000);
-      console.log(juck)
-    }
   }
   return (
     <>
