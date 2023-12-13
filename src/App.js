@@ -138,6 +138,10 @@ function App() {
       let enem=juck+Math.floor(Math.random()*3)
       setJuck(enem)
     }
+    if (inin==9&&mymy==juck) {
+      let enem=juck+Math.floor(Math.random()*2)
+      setJuck(enem)
+    }
     if (inin==9&&mymy>juck) {
       let enem=juck+Math.floor(Math.random()*6)
       setJuck(enem)
