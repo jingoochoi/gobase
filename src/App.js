@@ -38,7 +38,7 @@ function App() {
       // 2.외뜬(아웃++,러너=3?(점수++,러너--))
       let ou=outs+1
       setOuts(ou)
-      if (runn==3) {
+      if (runn==3&&outs<3) {
         let pt=mymy+1
         setMymy(pt)
         setRunn(2)
@@ -138,13 +138,13 @@ function App() {
       let enem=juck+Math.floor(Math.random()*3)
       setJuck(enem)
     }
-    if (inin==9&&mymy>juck) {
-      console.log('o')
-      let enem=juck+Math.floor(Math.random()*6)
+    if (inin==9&&mymy>juck&&juck%2==0) {
+      // console.log('o')
+      let enem=juck*1.5
       setJuck(enem)
     }
     if (inin==9&&mymy==juck) {
-      console.log('o')
+      // console.log('o')
       let enem=juck+Math.floor(Math.random()*2)
       setJuck(enem)
     }
